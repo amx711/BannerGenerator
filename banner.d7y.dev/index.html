@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from banner.d7y.dev/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Jul 2024 07:03:20 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&amp;family=Caveat:wght@700&amp;family=Chela+One&amp;family=Dancing+Script&amp;family=El+Messiri&amp;family=Gelasio&amp;family=Gloria+Hallelujah&amp;family=Great+Vibes&amp;family=Indie+Flower&amp;family=Lexend+Deca&amp;family=Lilita+One&amp;family=Lobster&amp;family=Lugrasimo&amp;family=Lumanosimo&amp;family=Pacifico&amp;family=Pangolin&amp;family=Playfair+Display&amp;family=Rubik&amp;family=Shadows+Into+Light&amp;family=Space+Mono&amp;family=Tektur&amp;family=Wix+Madefor+Text&amp;family=Yuji+Boku&amp;display=swap"
+        rel="stylesheet">
+    <script type="text/javascript" src="js/download.js"></script>
+    <script type="text/javascript" src="js/LZWEncoder.js"></script>
+    <script type="text/javascript" src="js/NeuQuant.js"></script>
+    <script type="text/javascript" src="js/GIFEncoder.js"></script>
+    <script type="text/javascript" src="js/b64.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="image/favicon.png">
+    
+    
+    <!-- Discord Embed -->
+    <meta content="Discord Banner Generator" property="og:title" />
+    <meta content="an open-source project that allows you to generate a personalized animated GIF banner" property="og:description" />
+    <meta content="https://banner.d7y.dev/" property="og:url" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:src" content="/image/preview.gif" />
+    <meta content="#000" data-react-helmet="true" name="theme-color" />
+</head>
+
+<body>
+    <div id="app">
+        <div class="lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="header">
+            <div class="logo">
+                <img src="image/logo.png">
+            </div>
+            <div class="divider"></div>
+            <div class="title">
+                <img src="image/title.gif">
+            </div>
+            <div class="github" onclick="window.open('https://github.com/D7y1/BannerGenerator', '_BLANK')">
+                <img src="image/github2.png">
+                <div class="tooltip">source code</div>
+            </div>
+        </div>
+        <div class="elements">
+            <div class="generate">
+                <div class="textbar">
+                    <div class="input-container">
+                        <input type="text" class="name" id="input" required="">
+                        <label for="input" class="label">Enter Text</label>
+                        <div class="underline"></div>
+                    </div>
+                </div>
+                <button class="btn" onclick="Generate()">
+                    <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1"
+                        class="sparkle">
+                        <path
+                            d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z">
+                        </path>
+                    </svg>
+
+                    <span class="text">Generate</span>
+                </button>
+            </div>
+            <div class="delay">
+                <div class="input-container">
+                    <input type="number" id="input" required="" value="100">
+                    <label for="input" class="label">Delay</label>
+                    <div class="underline"></div>
+                </div>
+                <div class="note">in milliseconds <content style="cursor: pointer;" onclick="document.querySelector('.delay input').value = 100">( Default 100 ms)</content></div>
+            </div>
+            <div class="preview-container">
+                <div class="prev-text">Preview</div>
+                <div class="back">
+                    <img src="../cdn.discordapp.com/attachments/729486981268111441/1130868679500894208/download_3.gif">
+                </div>
+                <div class="preview">
+                    <img class="prev banner" src="image/prv.gif">
+                    <div class="actions">
+                        <button class="download" onclick="DownloadBanner()">
+                            <svg class="svgIcon" viewBox="0 0 384 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path></svg>
+                            <span class="icon2"></span>
+                            <span class="tooltip">Download</span>
+                         </button>
+                    </div>
+                </div>
+            </div>
+            <div class="note-2">
+                you may have to run it twice to get the fonts loaded.
+            </div>
+        </div>
+
+    </div>
+</body>
+
+
+<!-- Mirrored from banner.d7y.dev/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Jul 2024 07:03:22 GMT -->
+</html>
